@@ -37,6 +37,12 @@ def forward_max_match(sentence,wordlist,m):
     return(word_cut)    
 ```
 
+分词结果：
+```python
+['我', '想', '成为', '一名', '数据', '科学家']
+```
+
+
 后向最大匹配：
 ```python
 def backward_max_match(sentence,wordlist,m):
@@ -63,4 +69,9 @@ def backward_max_match(sentence,wordlist,m):
             word_cut.append(wordlist_1th)
             sentence=sentence[:-len(wordlist_1th)]
     return(word_cut)    
+```
+
+分词结果：
+```python
+['科学家', '数据', '一名', '成为', '想', '我']
 ```
