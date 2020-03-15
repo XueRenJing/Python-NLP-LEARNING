@@ -10,6 +10,7 @@ wordlist = ["我", "想", "成为", "一名", "数据", "科学家"]
 *根据我们的例子进行前向最大匹配算法的说明*
 
 > 一、句子：我想成为一名数据科学家
+
 >1 我想成为一 False
 
 >2 我想成为 False
@@ -20,33 +21,51 @@ wordlist = ["我", "想", "成为", "一名", "数据", "科学家"]
 
 >5 我 True
 
->二、句子：想成为一名数据科学家
-1 想成为一名 False
-2 想成为一 False
-3 想成为 False
-4 想成 False
-5 想 True
+>二、句子变成：想成为一名数据科学家
+
+>1 想成为一名 False
+
+>2 想成为一 False
+
+>3 想成为 False
+
+>4 想成 False
+
+>5 想 True
 
 >三、句子：成为一名数据科学家
-1 成为一名数 False
-2 成为一名 False
-3 成为一 False
-4 成为 True
+
+>1 成为一名数 False
+
+>2 成为一名 False
+
+>3 成为一 False
+
+>4 成为 True
 
 >四、句子：一名数据科学家
-1 一名数据科 False
-2 一名数据 False
-3 一名数 False
-4 一名 False
+
+>1 一名数据科 False
+
+>2 一名数据 False
+
+>3 一名数 False
+
+>4 一名 False
 
 >五、句子：数据科学家
-1 数据科学家 False
-2 数据科学 False
-3 数据科 False
-4 数据 True
+
+>1 数据科学家 False
+
+>2 数据科学 False
+
+>3 数据科 False
+
+>4 数据 True
 
 >六、句子：科学家
-1 科学家 True
+
+>1 科学家 True
 
 
 
