@@ -2,7 +2,7 @@
 
 
 
-#### 给个实现例子，sentence为句子，wordlist为词典:
+#### 给个实现例子，sentence为句子，wordlist为词典，logx为概率对数:
 ```python
 '''
 例子：我想成为数据科学家
