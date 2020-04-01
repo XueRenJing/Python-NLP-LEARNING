@@ -29,6 +29,9 @@ import numpy as np
 dictionary = ['我','我想','想','成','成为','数','数据','科学','科学家','家']
 sentence = '我想成为数据科学家'
 probability = [0.1,0.05,0.1,0.1,0.2,0.2,0.05,0.05,0.05,0.1]
+```
+
+```python
 logx = -np.round(np.log(probability),2)
 ```
 
