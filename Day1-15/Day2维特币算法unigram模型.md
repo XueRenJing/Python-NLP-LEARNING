@@ -90,13 +90,6 @@ shortestlink=shortestlink(sentence,matrix)
 '''
 根据最短路径输出分词结果
 '''
-word_cut=[]
-for i in range(len(shortestlink)-1):
-    print(sentence[shortestlink[i]-1:shortestlink[i+1]-1])
-    word_cut.append(sentence[shortestlink[i]-1:shortestlink[i+1]-1])
-    if i==len(shortestlink):
-        break
-
 def word_cut(shortestlink，sentence):
     word_cut=[]
     for i in range(len(shortestlink)-1):
