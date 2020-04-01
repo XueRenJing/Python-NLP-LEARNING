@@ -43,3 +43,24 @@ def transformlist(sentence,dictionary,logx):
 
 transformlist = transformlist(sentence,dictionary,logx) 
 ```
+
+```python
+'''
+生成状态转移矩阵
+'''    
+#matrix = np.zeros((len(sentence)+2,len(sentence)+2))
+#
+#for i in range(len(transformlist)):
+#    print(transformlist[i][0])
+#    print(matrix[transformlist[i][0][0]][transformlist[i][0][1]])
+#    matrix[transformlist[i][0][0]][transformlist[i][0][1]] = transformlist[i][1]
+
+    
+def matrix_transform(sentence,transformlist):
+    matrix = np.zeros((len(sentence)+2,len(sentence)+2))
+    for i in range(len(transformlist)):
+        matrix[transformlist[i][0][0]][transformlist[i][0][1]] = transformlist[i][1]
+    return(matrix)
+    
+matrix = matrix_transform(sentence,transformlist)  
+```
