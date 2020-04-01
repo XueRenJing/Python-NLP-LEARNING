@@ -1,7 +1,7 @@
 ![avatar](/Users/betty/Downloads/自然语言处理/贪心学园课程练习/自建课程练习/02维特币算法-改.png)
 
 
-
+在Day1中提到最大匹配算法里面只利用了词典，并没有考虑到语义的情况
 #### 给个实现例子，sentence为句子，wordlist为词典，logx为概率对数:
 ```python
 '''
