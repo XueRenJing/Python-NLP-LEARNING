@@ -56,3 +56,64 @@ def matrix_transform(sentence,transformlist):
     
 matrix = matrix_transform(sentence,transformlist)  
 ```
+
+
+
+```python
+'''
+根据矩阵输出最短路径
+'''
+def shortestlink(sentence,matrix):
+    test=[0]
+    pointer=[1]    
+    for i in range(2,len(sentence)+2,1):
+        test2=[]
+        incominglink=[]
+        for j in range(1,i,1):
+            if matrix[j][i]>0:
+                print(test[j-1]+matrix[j][i])
+                test2.append(test[j-1]+matrix[j][i])
+                incominglink.append(j)
+        link_min = dict(zip(test2,incominglink))    
+        tt=min(test2)
+        ttt=link_min[tt]
+        test.append(tt)
+        pointer.append(ttt)
+    pointer.append(len(sentence)+1)
+    shortestlink=list(set(pointer))
+    return(shortestlink)
+    
+shortestlink=shortestlink(sentence,matrix)
+```
+
+```python
+'''
+根据最短路径输出分词结果
+'''
+word_cut=[]
+for i in range(len(shortestlink)-1):
+    print(sentence[shortestlink[i]-1:shortestlink[i+1]-1])
+    word_cut.append(sentence[shortestlink[i]-1:shortestlink[i+1]-1])
+    if i==len(shortestlink):
+        break
+
+def word_cut(shortestlink，sentence):
+    word_cut=[]
+    for i in range(len(shortestlink)-1):
+        print(sentence[shortestlink[i]-1:shortestlink[i+1]-1])
+        word_cut.append(sentence[shortestlink[i]-1:shortestlink[i+1]-1])
+        if i==len(shortestlink):
+            break
+    return(word_cut)
+    
+word_cut(shortestlink,sentence)
+```
+
+
+
+
+
+
+
+
+
