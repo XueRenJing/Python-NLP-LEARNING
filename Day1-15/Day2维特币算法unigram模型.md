@@ -34,7 +34,7 @@ probability = [0.1,0.05,0.1,0.1,0.2,0.2,0.05,0.05,0.05,0.1]
 ```python
 logx = -np.round(np.log(probability),2)
 ```
-#### 结果为：
+#### logx结果为：
 ```python
 array([2.3 , 3.  , 2.3 , 2.3 , 1.61, 1.61, 3.  , 3.  , 3.  , 2.3 ])
 ```
@@ -56,6 +56,25 @@ def transformlist(sentence,dictionary,logx):
     return(transformlist)
 
 transformlist = transformlist(sentence,dictionary,logx) 
+
+#### transformlist结果为：
+```python
+[((8, 9), 20),
+ ((4, 5), 20),
+ ((6, 7), 20),
+ ((7, 8), 20),
+ ((1, 2), 2.3),
+ ((1, 3), 3.0),
+ ((2, 3), 2.3),
+ ((3, 4), 2.3),
+ ((3, 5), 1.61),
+ ((5, 6), 1.61),
+ ((5, 7), 3.0),
+ ((7, 9), 3.0),
+ ((7, 10), 3.0),
+ ((9, 10), 2.3)]
+```
+
 ```
 
 ```python
@@ -71,7 +90,31 @@ def matrix_transform(sentence,transformlist):
 matrix = matrix_transform(sentence,transformlist)  
 ```
 
-
+#### matrix结果为：
+```python
+array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
+         0.  ,  0.  ],
+       [ 0.  ,  0.  ,  2.3 ,  3.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
+         0.  ,  0.  ],
+       [ 0.  ,  0.  ,  0.  ,  2.3 ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
+         0.  ,  0.  ],
+       [ 0.  ,  0.  ,  0.  ,  0.  ,  2.3 ,  1.61,  0.  ,  0.  ,  0.  ,
+         0.  ,  0.  ],
+       [ 0.  ,  0.  ,  0.  ,  0.  ,  0.  , 20.  ,  0.  ,  0.  ,  0.  ,
+         0.  ,  0.  ],
+       [ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  1.61,  3.  ,  0.  ,
+         0.  ,  0.  ],
+       [ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  , 20.  ,  0.  ,
+         0.  ,  0.  ],
+       [ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  , 20.  ,
+         3.  ,  3.  ],
+       [ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
+        20.  ,  0.  ],
+       [ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
+         0.  ,  2.3 ],
+       [ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
+         0.  ,  0.  ]])
+```
 
 ```python
 '''
@@ -99,7 +142,12 @@ def shortestlink(sentence,matrix):
     
 shortestlink=shortestlink(sentence,matrix)
 ```
+#### shortestlink结果为：
+```python
+[1, 3, 5, 7, 10]
+```
 
+#### 把最短路径转化为分词结果
 ```python
 '''
 根据最短路径输出分词结果
@@ -113,12 +161,13 @@ def word_cut(shortestlink，sentence):
             break
     return(word_cut)
     
-word_cut(shortestlink,sentence)
+word_cut=word_cut(shortestlink,sentence)
 ```
 
-
-
-
+#### 最后分词结果为：
+```python
+['我想', '成为', '数据', '科学家']
+```
 
 
 
