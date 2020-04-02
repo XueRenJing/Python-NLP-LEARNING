@@ -64,7 +64,7 @@ def transformlist(sentence,dictionary,logx):
 
 transformlist = transformlist(sentence,dictionary,logx) 
 ```
-#### transformlist结果为，对应图中的路径和数字，从8到9是20：
+#### transformlist结果为，对应图中的路径和数字，例如，从8到9是20：
 ```python
 [((8, 9), 20),
  ((4, 5), 20),
@@ -155,7 +155,7 @@ shortestlink=shortestlink(sentence,matrix)
 [1, 3, 5, 7, 10]
 ```
 
-#### 把最短路径转化为分词结果
+#### 把最短路径转化为分词结果：
 ```python
 '''
 根据最短路径输出分词结果
