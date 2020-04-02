@@ -64,7 +64,7 @@ def transformlist(sentence,dictionary,logx):
 
 transformlist = transformlist(sentence,dictionary,logx) 
 ```
-#### 把路径中跳转的过程transformlist结果如下，对应图中的路径和数字，例如，从8到9是20：
+#### 所以把路径中跳转的过程transformlist结果如下，对应图中的路径和数字，例如，从8到9是20：
 ```python
 [((8, 9), 20),
  ((4, 5), 20),
@@ -97,7 +97,7 @@ def matrix_transform(sentence,transformlist):
 matrix = matrix_transform(sentence,transformlist)  
 ```
 
-#### 状态转移矩阵matrix结果为：
+#### 所以，状态转移矩阵matrix结果为：
 ```python
 array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
          0.  ,  0.  ],
@@ -150,7 +150,7 @@ def shortestlink(sentence,matrix):
     
 shortestlink=shortestlink(sentence,matrix)
 ```
-#### shortestlink结果为：
+#### 所以，最短路径shortestlink结果为：
 ```python
 [1, 3, 5, 7, 10]
 ```
@@ -172,7 +172,7 @@ def word_cut(shortestlink，sentence):
 word_cut=word_cut(shortestlink,sentence)
 ```
 
-#### 最后分词结果为：
+#### 所以最后分词结果为：
 ```python
 ['我想', '成为', '数据', '科学家']
 ```
