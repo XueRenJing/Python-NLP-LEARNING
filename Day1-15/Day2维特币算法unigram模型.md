@@ -40,6 +40,7 @@ logx = -np.round(np.log(probability),2)
 ```python
 array([2.3 , 3.  , 2.3 , 2.3 , 1.61, 1.61, 3.  , 3.  , 3.  , 2.3 ])
 ```
+![image]（https://github.com/XueRenJing/Python-NLP-LEARNING/blob/master/viterbi.png）
 
 ```python
 '''
