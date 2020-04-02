@@ -46,7 +46,7 @@ array([2.3 , 3.  , 2.3 , 2.3 , 1.61, 1.61, 3.  , 3.  , 3.  , 2.3 ])
 
 ![image](https://github.com/XueRenJing/Python-NLP-LEARNING/raw/master/viterbi.png)
 
-#### 把该图转化矩阵比较方便运输，首先第一步转为数组：
+#### 为方便运输，把上图的过程转化为状态转移矩阵，首先第一步转为数组：
 ```python
 '''
 生成状态转移数组
@@ -97,7 +97,7 @@ def matrix_transform(sentence,transformlist):
 matrix = matrix_transform(sentence,transformlist)  
 ```
 
-#### matrix结果为：
+#### 状态转移矩阵matrix结果为：
 ```python
 array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
          0.  ,  0.  ],
@@ -123,6 +123,7 @@ array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
          0.  ,  0.  ]])
 ```
 
+#### 根据矩阵输出最短路径：
 ```python
 '''
 根据矩阵输出最短路径
