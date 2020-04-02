@@ -46,7 +46,7 @@ array([2.3 , 3.  , 2.3 , 2.3 , 1.61, 1.61, 3.  , 3.  , 3.  , 2.3 ])
 
 ![image](https://github.com/XueRenJing/Python-NLP-LEARNING/raw/master/viterbi.png)
 
-#### 把该图转化矩阵比较方便运输，首先第一步转为数组
+#### 把该图转化矩阵比较方便运输，首先第一步转为数组：
 ```python
 '''
 生成状态转移数组
@@ -82,8 +82,8 @@ transformlist = transformlist(sentence,dictionary,logx)
  ((9, 10), 2.3)]
 ```
 
-```
 
+#### 进一步，生成状态转移矩阵：
 ```python
 '''
 生成状态转移矩阵
