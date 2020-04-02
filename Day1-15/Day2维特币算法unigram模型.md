@@ -64,7 +64,7 @@ def transformlist(sentence,dictionary,logx):
 
 transformlist = transformlist(sentence,dictionary,logx) 
 ```
-#### transformlist结果为，对应图中的路径和数字，例如，从8到9是20：
+#### 把路径中跳转的过程transformlist结果如下，对应图中的路径和数字，例如，从8到9是20：
 ```python
 [((8, 9), 20),
  ((4, 5), 20),
