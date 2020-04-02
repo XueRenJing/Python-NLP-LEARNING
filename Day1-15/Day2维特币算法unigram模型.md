@@ -56,7 +56,7 @@ def transformlist(sentence,dictionary,logx):
     return(transformlist)
 
 transformlist = transformlist(sentence,dictionary,logx) 
-
+```
 #### transformlist结果为：
 ```python
 [((8, 9), 20),
