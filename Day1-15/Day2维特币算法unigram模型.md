@@ -38,8 +38,15 @@ logx = -np.round(np.log(probability),2)
 ```python
 array([2.3 , 3.  , 2.3 , 2.3 , 1.61, 1.61, 3.  , 3.  , 3.  , 2.3 ])
 ```
+
+#### 结合上面的分词方式以及每个词的概率进行-log(x)的转换后，可以通过下图的形式表达，例如路径上面词“我想”用点1到点3的路径表达，词“成为”用点3到点5的路径表达，词“我”用点1到点2的路径表达，如此类推。而上面的数字就是每个词概率的-log(x)转换
+#### 一开始我们求各自分词的最大的概率，假设其中一种分词（‘我想’，‘成为’，‘数据’，‘科学’，‘家’）的概率最大，那么：
+#### P（‘我想’，‘成为’，‘数据’，‘科学’，‘家’）=P（‘我想’）* P（‘成为’）* P（‘数据’）* P（‘科学’）* P（‘家’）就是最大
+#### 而通过-log(x)的转换之后，-log(P(‘我想’，‘成为’，‘数据’，‘科学’，‘家’))的值就是最小的，反映到下图中，就是一条最短路径，所以求最大的分词可能性就是一个求最短路径的过程
+
 ![image](https://github.com/XueRenJing/Python-NLP-LEARNING/raw/master/viterbi.png)
 
+#### 把该图转化矩阵比较方便运输，首先第一步转为数组
 ```python
 '''
 生成状态转移数组
@@ -57,7 +64,7 @@ def transformlist(sentence,dictionary,logx):
 
 transformlist = transformlist(sentence,dictionary,logx) 
 ```
-#### transformlist结果为：
+#### transformlist结果为，对应图中的路径和数字，从8到9是20：
 ```python
 [((8, 9), 20),
  ((4, 5), 20),
