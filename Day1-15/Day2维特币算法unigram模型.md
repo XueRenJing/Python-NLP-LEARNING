@@ -19,8 +19,6 @@
 概率x：[0.1,0.05,0.1,0.1,0.2,0.2,0.05,0.05,0.05,0.1]
 '''
 import numpy as np
-#matrix=np.zeros((9,9))
-#matrix[0][8]
 from nltk.util import bigrams, trigrams
 from nltk.text import Text
 from nltk import FreqDist
