@@ -63,6 +63,11 @@ P（‘我想’，‘成为’，‘数据’，‘科学’，‘家’）=P�
  生成状态转移数组
  '''
  def transformlist(sentence,dictionary,logx):
+     '''
+     功能：对输入的句子、词典、词概率的-log(x)转换
+     输入：sentence句子，dictionary词典，词典中的词概率通过-log(x)转换
+     输出：状态转移链即从某点跳转到某点，以及改状态转移链的概率的-log(x)转换
+     '''
      word_pro = dict(zip(dictionary,logx))
      word_noin_sentence=list((set(sentence)-set([i for i in word_pro.keys() if len(i)==1])))
      pro_no=[20]*len(list(set(sentence)-set([i for i in word_pro.keys() if len(i)==1])))
