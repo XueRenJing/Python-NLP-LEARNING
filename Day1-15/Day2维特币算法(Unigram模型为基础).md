@@ -105,6 +105,11 @@ P（‘我想’，‘成为’，‘数据’，‘科学’，‘家’）=P�
  生成状态转移矩阵
  '''    
  def matrix_transform(sentence,transformlist):
+     '''
+     功能：把状态转移链条转化为状态转移矩阵
+     输入：sentence句子，transformlist状态转移链条
+     输出：状态转移矩阵
+     '''    
      matrix = np.zeros((len(sentence)+2,len(sentence)+2))
      for i in range(len(transformlist)):
          matrix[transformlist[i][0][0]][transformlist[i][0][1]] = transformlist[i][1]
@@ -145,6 +150,11 @@ P（‘我想’，‘成为’，‘数据’，‘科学’，‘家’）=P�
  根据矩阵输出最短路径
  '''
  def shortestlink(sentence,matrix):
+     '''
+     功能：通过状态转移矩阵和句子输出分词
+     输入：sentence句子，matrix状态转移链条
+     输出：最短路径
+     '''    
      test=[0]
      pointer=[1]    
      for i in range(2,len(sentence)+2,1):
@@ -177,6 +187,11 @@ P（‘我想’，‘成为’，‘数据’，‘科学’，‘家’）=P�
  根据最短路径输出分词结果
  '''
  def word_cut(shortestlink，sentence):
+     '''
+     功能：把最短路径转化成分词结果
+     输入：shortestlink最短路径，sentence句子
+     输出：最短路径代表的分词结果
+     '''    
      word_cut=[]
      for i in range(len(shortestlink)-1):
          print(sentence[shortestlink[i]-1:shortestlink[i+1]-1])
