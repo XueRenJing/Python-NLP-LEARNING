@@ -14,7 +14,7 @@
 
 一种最简单的方法就是计算编辑距离，通过计算用户的输入和候选单词之间的编辑距离，从候选单词中找到与用户输入编辑距离最短的。
 
-![image](https://github.com/XueRenJing/Python-NLP-LEARNING/logo/master/edit_distance.png)
+![image](https://github.com/XueRenJing/Python-NLP-LEARNING/raw/master/edit_distance.png)
 
 那编辑的操作有哪几种呢？
 >1 insert 插入
