@@ -37,7 +37,7 @@
 
 以下通过创建矩阵的方式来说明，假设我们两个数组的长度分别为m，n，那么我们首先创建一个（m+1）*（n+1）维的空矩阵，首先给矩阵的
 第一列和第一行赋值，值与字符所在位置有关系，如图一所示。
-![image](https://github.com/XueRenJing/Python-NLP-LEARNING/logo/master/pictures/编辑距离一.png)
+![image](https://github.com/XueRenJing/Python-NLP-LEARNING/raw/master/pictures/编辑距离一.png)
 
 以此为基础并根据一些计算规则计算矩阵剩余的元素
 
@@ -52,7 +52,7 @@
 
 >d[i-1,j-1]+temp表示我们的替换操作
 
-![image](https://github.com/XueRenJing/Python-NLP-LEARNING/logo/master/pictures/编辑距离二.png)
+![image](https://github.com/XueRenJing/Python-NLP-LEARNING/raw/master/pictures/编辑距离二.png)
 
 依次类推直到矩阵全部生成
 根据以上的思路，能够通过代码实现我们的算法
