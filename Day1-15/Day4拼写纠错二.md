@@ -135,3 +135,13 @@ def find_best(word,NWORDS):
     word_list = words or know_create_dist1_word(word,NWORDS) or know_create_dist2_word(word,NWORDS)
     return(max(word_list,key = NWORDS.get))
 ```   
+
+#### 以纠正单词sothing为例，运行
+```python
+find_best('sothing',NWORDS)
+```   
+
+#### 结果为nothing，拼写正确：
+```python
+'nothing'
+```   
