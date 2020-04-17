@@ -112,8 +112,6 @@ def words(text):
     '''
     return(re.findall('[a-z]+', text.lower()))
 
-words(text_t)
-
 def train(features):
     '''
     计算每个词的出现概率p
