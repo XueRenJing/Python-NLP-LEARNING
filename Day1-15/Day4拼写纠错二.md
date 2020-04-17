@@ -131,6 +131,11 @@ NWORDS = train(words(text_t))
 
 ```python
 def find_best(word,NWORDS):
+    '''
+    功能：对拼错的词根据词典返回正确的词
+    输入：拼错的词以及需要的词典
+    输出：返回拼写正确的词
+    '''
     words = [w for w in [word] if w in NWORDS]
     word_list = words or know_create_dist1_word(word,NWORDS) or know_create_dist2_word(word,NWORDS)
     return(max(word_list,key = NWORDS.get))
