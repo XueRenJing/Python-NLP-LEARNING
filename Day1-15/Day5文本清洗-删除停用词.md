@@ -124,7 +124,7 @@ print(result)
 
 ##### 打印结果为：
 ```python
- Filtered Sentence 
+Filtered Sentence 
 
 He determined drop litigation monastry, relinguish claims wood-cuting fishery rihgts once. He ready becuase rights valuable, vaguest idea wood river question were.
 ```
