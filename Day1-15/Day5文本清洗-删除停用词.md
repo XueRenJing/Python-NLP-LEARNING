@@ -56,7 +56,7 @@ def seg_sentence(sentence):
 
 seg_sentence(['你','是','科学家','了','吧'])
 ```
-##### 输出
+##### 输出：
 ```python
 '科学家'
 ```
