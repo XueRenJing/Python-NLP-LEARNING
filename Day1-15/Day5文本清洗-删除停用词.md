@@ -21,7 +21,7 @@
 是否删除停用词取决于我们的具体场景，如果我们是更关注除了停用词之外的文本本身的含义，这一般是文本分类任务。举个例子，在句子“我们应该为了有更好的工作而努力学习吧”中“更好”、“工作”、“学习”等这些词就比“应该”、“吧”这些语气助词对句子本身的含义表达来说更加重要。
 但是在机器翻译等一些场景里面，这些停用词的分析是有一定含义的，这里不继续展开。可以归纳如下：
 
-##### 我们可以在以下场景删除停用词：
+#####我们可以在以下场景删除停用词：
 + 文本分类
 + 垃圾邮件过滤
 + 语言分类
@@ -30,21 +30,31 @@
 + 自动标记(Auto-Tag)生成
 + 避免删除停用词
 
-##### 删除停用词
+#####删除停用词
 + 机器翻译
 + 语言建模
 + 文本摘要
 + 问答(QA)系统
 
-## 删除停用词的不同方法
+##删除停用词的不同方法
 中文的删除停用词的方法，我这里通过自定义函数的方式来实现。对我们已经通过分词手段把句子转化为词语的列表，再进行停用词删除的操作。
 
 ```python
 def stopwordslist(filepath):
+    '''
+    功能：从文件中读取停用词库
+    输入：文件路径
+    输出：停用词列表
+    '''
     stopwords = [line.strip() for line in open(filepath, 'r', encoding='utf-8').readlines()]
     return stopwords
 
 def seg_sentence(sentence):
+    '''
+    功能：对已经过分词的句子删除停用词
+    输入：已分词的句子，文件路径
+    输出：停用词列表
+    '''
     stopwords = stopwordslist('/Users/betty/Downloads/自然语言处理/贪心学园课程练习/自建课程练习/中文停用词表.txt')  # 这里加载停用词的路径
     outstr = ''
     for word in sentence:
@@ -56,7 +66,7 @@ def seg_sentence(sentence):
 
 seg_sentence(['你','是','科学家','了','吧'])
 ```
-##### 输出：
+#####输出
 ```python
 '科学家'
 ```
@@ -97,7 +107,7 @@ print("\n\nFiltered Sentence \n\n")
 print(" ".join(filtered_sentence)) 
 ```
 
-##### 打印结果为：
+#####打印结果为：
 ```python
 Original Sentence 
 
@@ -122,14 +132,13 @@ print('\n\n Filtered Sentence \n\n')
 print(result)  
 ```
 
-##### 打印结果为：
+#####打印结果为：
 ```python
-Filtered Sentence 
+ Filtered Sentence 
 
 He determined drop litigation monastry, relinguish claims wood-cuting fishery rihgts once. He ready becuase rights valuable, vaguest idea wood river question were.
 ```
 所以以上就是python删除停用词的例子以及实施方式。
-
 
 
 
