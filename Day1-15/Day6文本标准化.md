@@ -31,12 +31,12 @@ for w in filtered_sentence:
 print(filtered_sentence)
 print(Stem_words)
 ```
-#####词干化前打印结果为：
+##### 词干化前打印结果为：
 ```python
 ['He', 'determined', 'drop', 'litigation', 'monastry', ',', 'relinguish', 'claims', 'wood-cuting', 'fishery', 'rihgts', '.', 'He', 'ready', 'becuase', 'rights', 'become', 'much', 'less', 'valuable', ',', 'indeed', 'vaguest', 'idea', 'wood', 'river', 'question', '.']
 ```
 
-#####词干化后打印结果为：
+##### 词干化后打印结果为：
 ```python
 ['He', 'determin', 'drop', 'litig', 'monastri', ',', 'relinguish', 'claim', 'wood-cut', 'fisheri', 'rihgt', '.', 'He', 'readi', 'becuas', 'right', 'becom', 'much', 'less', 'valuabl', ',', 'inde', 'vaguest', 'idea', 'wood', 'river', 'question', '.']
 ```
