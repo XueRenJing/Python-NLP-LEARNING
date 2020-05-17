@@ -26,6 +26,18 @@ One-hot比较好理解，首先给出语料库里面每个词一个编号进行�
 
 >措施: [0,0,0,0,0,0,1]
 
+```python
+import pandas as pd
+text1 = pd.get_dummies(['我们','要注意','疫情','防控','做好','防护','措施'])
+
+print('我们：',text1['我们'].tolist())
+print('要注意：',text1['要注意'].tolist())
+print('疫情：',text1['疫情'].tolist())
+print('防控：',text1['防控'].tolist())
+print('做好：',text1['做好'].tolist())
+print('防护：',text1['防护'].tolist())
+print('措施：',text1['措施'].tolist())
+```
 能看出词的向量维度的个数等同于词典的长度，所以当词典很大时，每个词表示出来的词向量会比较稀疏。只有一个地方为1，其他地方都为0。
 
 那么接下来句子的one-hot向量化应该怎么表示？
