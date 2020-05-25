@@ -75,7 +75,7 @@ vec=cv.fit_transform(['我 是 一条 天狗 呀','我 把 月 来 吞 了'])#�
 print(cv.vocabulary_)
 print(vec)
 ```
-#### 优缺点
+#### 优缺点：
 
 ##### 优点：
 相对简单、所以计算速度较快。
