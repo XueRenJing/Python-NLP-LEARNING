@@ -66,3 +66,12 @@ TF-IDF的分数代表了词语在当前文档和整个语料库中的相对重�
 
 
 
+#### python实现代码
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+cv=TfidfVectorizer(token_pattern=r"(?u)\b\w+\b")
+vec=cv.fit_transform(['我 是 一条 天狗 呀','我 把 月 来 吞 了'])#传入句子组成的list
+print(cv.vocabulary_)
+print(vec)
+```
