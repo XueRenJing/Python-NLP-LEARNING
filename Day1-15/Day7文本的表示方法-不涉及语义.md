@@ -88,10 +88,34 @@ print(vec)
 
 $$d=\sqrt(\sum_{i=1}^n (x_i-y_i)^2) $$
 
+##### python实现
+```python
+from math import sqrt
+def Euclidean(x1,x2):
+    '''
+    功能：计算两个向量间的欧式距离
+    输入：需要计算距离的向量x1，向量x2
+    输出：最后两向量的欧式距离
+    '''
+    dist = sqrt(sum((np.array(x1)-np.array(x2))**2))
+    return dist
+```
 
 ### 余弦相似度
 
 $$\cos\theta=\frac{\sum_{i=1}^n x_i*y_i}{\sqrt{\sum_{i=1}^n x_i^2  \sum_{i=1}^n y_i^2}}$$
+
+##### python实现
+```python
+def cos(x1,x2):
+    '''
+    功能：计算两个向量间的欧式距离
+    输入：需要计算距离的向量x1，向量x2
+    输出：最后两向量的欧式距离
+    '''
+    dist = np.array(x1)*np.array(x2)/sqrt(sum(np.array(x1)**2)*sum(np.array(x2)**2))
+    return dist
+```
 
 总的来说，以上的方法都有着各自的缺点，而共同的缺点都为无法理解文字的语义。所以后面诞生了兼顾理解文字语言的文本向量化的方法。
 
