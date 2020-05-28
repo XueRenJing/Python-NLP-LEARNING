@@ -90,7 +90,7 @@ $$d=\sqrt(\sum_{i=1}^n (x_i-y_i)^2) $$
 
 ### 余弦相似度
 
-$$\cos\theta=\frac{\sum_{i=1}^n x_i*y_i}{\sqrt{\sum_{i=1}^n x_i^2 \cdot \sum_{i=1}^n y_i^2}}$$
+$$\cos\theta=\frac{\sum_{i=1}^n x_i*y_i}{\sqrt{\sum_{i=1}^n x_i^2  \sum_{i=1}^n y_i^2}}$$
 
 总的来说，以上的方法都有着各自的缺点，而共同的缺点都为无法理解文字的语义。所以后面诞生了兼顾理解文字语言的文本向量化的方法。
 
