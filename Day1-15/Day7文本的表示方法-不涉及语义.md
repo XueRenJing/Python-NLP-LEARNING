@@ -116,7 +116,7 @@ def cos(x1,x2):
     dist = sum(np.array(x1)*np.array(x2))/sqrt(sum(np.array(x1)**2)*sum(np.array(x2)**2))
     return dist
 ```
-##### 通过以上的计算方法来尝试计算以下例子
+#### 通过以上的计算方法来尝试计算以下例子的文本相似度
 
 >今天：[1 0 0 0]
 >明天：[0 1 0 0]
